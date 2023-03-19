@@ -7,4 +7,8 @@
 ForeingKey
 ManytoMany....
 
-## Docker - Container
+## Cache
+- Utilizar Cache...
+
+## Docker
+- Criar Container....Dockerfile
