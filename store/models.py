@@ -44,6 +44,7 @@ class Buy(models.Model):
     
     
     card_number = models.CharField(max_length=16, blank=False, null=False, help_text='Card_number', verbose_name=u'Card_number')
+    
     cvv = models.CharField(max_length=3, blank=False, null=False, help_text='Buy cvv', verbose_name=u'Cvv')
     card_holder_name = models.CharField(max_length=256, blank=False, null=False, help_text='Buy card_holder_name', verbose_name=u'Card_holder_name')
     exp_date = models.CharField(max_length=5, blank=False, null=False, help_text='Buy exp_date', verbose_name=u'Exp_date')
