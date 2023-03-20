@@ -1,6 +1,6 @@
 from rest_framework import viewsets, generics
-from store.models import Product, Client, Buy, History
-from store.serializer import ProductSerializer, ClientSerializer, BuySerializer, HistorySerializer
+from store.models import Product, Client, Buy
+from store.serializer import ProductSerializer, ClientSerializer, BuySerializer
 
 
 class ProductViewSet(viewsets.ModelViewSet):
@@ -18,14 +18,6 @@ class BuyViewSet(viewsets.ModelViewSet):
     serializer_class = BuySerializer
 
 
-class HistoryViewSet(viewsets.ModelViewSet):
-    queryset = History.objects.all()
-    serializer_class = HistorySerializer
-    
-    
-class ClientHistoryView(generics.ListAPIView):
-    #Listar compras de um cliente
-    def get_queryset(self):
-        queryset = History.objects.filter(cliente_id=self.kwargs['pk'])
-        return queryset
-    serializer_class = HistorySerializer
+class BuyHistoryAPIView(generics.ListAPIView):
+    queryset = Buy.objects.all()
+    serializer_class = BuySerializer
