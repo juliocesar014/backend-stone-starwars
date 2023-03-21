@@ -1,14 +1,25 @@
-#Faltando:
+# API Star Wars Stone - Backend
 
-## Testar API
+Este repósitorio tem o objetivo de apresentar este projeto.
 
-## Utilizar relações entre as Classes
+## Como rodar na sua máquina
 
-ForeingKey
-ManytoMany....
+Clone o projeto
 
-## Cache
-- Utilizar Cache...
+```bash
+  git clone git@github.com:juliocesar014/backend-stone-starwars.git
+```
 
-## Docker
-- Criar Container....Dockerfile
+Entre no diretório do projeto
+
+```bash
+  cd backend-stone-starwars
+```
+
+```bash
+  docker build -t nomedocontainer .
+```
+
+```bash
+  docker run -p 8000:8000 nomedocontainer
+```
