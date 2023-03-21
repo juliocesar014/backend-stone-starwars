@@ -16,6 +16,8 @@ Entre no diretório do projeto
   cd backend-stone-starwars
 ```
 
+Crie o container Docker e o execute
+
 ```bash
   docker build -t nomedocontainer .
 ```
